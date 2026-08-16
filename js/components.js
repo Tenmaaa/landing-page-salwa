@@ -20,7 +20,13 @@ async function loadComponent(name) {
   }
 
   try {
-    const response = await fetch(`./components/${name}.html`);
+    const isPagesDirectory = window.location.pathname.includes("/pages/");
+
+    const componentPath = isPagesDirectory
+      ? `../components/${name}.html`
+      : `./components/${name}.html`;
+
+    const response = await fetch(componentPath);
 
     if (!response.ok) {
       throw new Error(`Gagal memuat ${name}.html`);
@@ -32,10 +38,40 @@ async function loadComponent(name) {
   }
 }
 
+function setupPageLinks() {
+  const isPagesDirectory = window.location.pathname.includes("/pages/");
+
+  const pagePaths = {
+    home: isPagesDirectory ? "../index.html" : "./index.html",
+
+    about: isPagesDirectory
+      ? "./tentang_kami.html"
+      : "./pages/tentang_kami.html",
+
+    umrah: isPagesDirectory ? "./paket-umrah.html" : "./pages/paket-umrah.html",
+
+    gallery: isPagesDirectory ? "./galeri.html" : "./pages/galeri.html",
+
+    contact: isPagesDirectory ? "./kontak.html" : "./pages/kontak.html",
+  };
+
+  const pageLinks = document.querySelectorAll("[data-page]");
+
+  pageLinks.forEach((link) => {
+    const page = link.dataset.page;
+
+    if (pagePaths[page]) {
+      link.href = pagePaths[page];
+    }
+  });
+}
+
 async function loadComponents() {
   for (const component of components) {
     await loadComponent(component);
   }
+
+  setupPageLinks();
 
   document.dispatchEvent(new Event("componentsLoaded"));
 }
