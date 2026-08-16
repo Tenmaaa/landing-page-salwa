@@ -6,6 +6,7 @@ const components = [
   "hotels",
   "adventages",
   "programs",
+  "partnership",
   "testimonials",
   "faq",
   "cta",
