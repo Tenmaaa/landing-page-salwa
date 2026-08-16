@@ -48,7 +48,7 @@ function setupPageLinks() {
       ? "./tentang_kami.html"
       : "./pages/tentang_kami.html",
 
-    umrah: isPagesDirectory ? "./paket-umrah.html" : "./pages/paket-umrah.html",
+    umrah: isPagesDirectory ? "./paket_umrah.html" : "./pages/paket_umrah.html",
 
     gallery: isPagesDirectory ? "./galeri.html" : "./pages/galeri.html",
 
