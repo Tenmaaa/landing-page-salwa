@@ -1,139 +1,133 @@
-<section id="hotels" class="bg-gray-50 px-6 py-20 sm:px-8 lg:px-12">
-  <div class="mx-auto max-w-7xl">
+<section id="hotels" class="relative overflow-hidden bg-gray-50">
 
-    <!-- Section Heading -->
+  <!-- =========================
+       Main Container
+       ========================= -->
+
+  <div class="relative mx-auto max-w-7xl
+           px-6 py-16
+           sm:px-8 sm:py-20
+           lg:px-8 lg:py-24">
+
+    <!-- =========================
+         Section Heading
+         ========================= -->
+
     <div class="mx-auto max-w-3xl text-center">
 
-      <p class="text-lg font-semibold
-                       tracking-[0.2em] text-green-700">
-        PILIHAN HOTEL
-      </p>
-
-      <h2 class="mt-3 text-3xl font-bold
-                       leading-tight text-gray-900
-                       sm:text-4xl">
-        Dekat dengan Masjid,
-        <span class="text-green-700">
-          Lebih Nyaman Beribadah
-        </span>
+      <h2 class="text-3xl font-bold
+               leading-tight text-gray-900
+               sm:text-4xl">
+        Pilihan Hotel
+        untuk Kenyamanan Jamaah
       </h2>
 
-      <p class="mt-5 text-lg leading-relaxed
-                       text-gray-600 sm:text-lg">
-        Dalam memilih hotel, jangan hanya melihat
-        jumlah bintangnya. Jarak hotel menuju masjid
-        juga menjadi pertimbangan penting bagi jamaah.
+      <p class="mt-4 text-sm leading-6
+               text-gray-600
+               sm:text-xl">
+        Hotel yang dekat dengan masjid memberikan
+        kemudahan dan kenyamanan selama beribadah.
       </p>
 
     </div>
 
 
-    <!-- Hotel Cards -->
-    <div class="mx-auto mt-12 grid max-w-6xl
-                   grid-cols-1 gap-8
-                   lg:grid-cols-2">
+    <!-- =========================
+         Hotel Cards
+         ========================= -->
 
-      <!-- Makkah -->
+    <div class="mx-auto mt-12 grid max-w-6xl
+             grid-cols-1 gap-8
+             lg:grid-cols-2">
+
+      <!-- ========================
+           Makkah
+           ======================== -->
+
       <article class="overflow-hidden rounded-2xl
-                       bg-white shadow-sm
-                       ring-1 ring-gray-100">
+               bg-white shadow-sm
+               ring-1 ring-gray-100">
 
         <!-- Image -->
-        <div class="relative aspect-[16/10] overflow-hidden">
 
-          <img src="./assets/images/olayan.webp" alt="Ilustrasi kawasan Makkah" class="h-full w-full object-cover"
-            loading="lazy">
+        <div class="relative aspect-[16/10]
+                 overflow-hidden">
+
+          <img src="./assets/images/olayan.webp" alt="Ilustrasi kawasan Makkah" class="h-full w-full
+                   object-cover
+                   transition duration-500
+                   hover:scale-105" loading="lazy">
 
           <div class="absolute inset-x-0 bottom-0
-                               bg-gradient-to-t
-                               from-black/70 to-transparent
-                               p-6">
+                   bg-gradient-to-t
+                   from-black/70
+                   to-transparent
+                   p-6">
+
             <p class="text-sm font-medium
-                                   text-white/90">
+                     text-white/90">
               Makkah
             </p>
 
             <h3 class="mt-1 text-2xl font-bold
-                                   text-white">
+                     text-white">
               Hotel Olayan Ajyad
             </h3>
+
           </div>
 
         </div>
 
 
         <!-- Content -->
-        <div class="p-6 sm:p-8">
 
-          <div class="flex items-center gap-3">
+        <div class="p-6">
 
-            <div class="flex h-11 w-11
-                                   shrink-0 items-center
-                                   justify-center
-                                   rounded-full
-                                   bg-green-100" aria-hidden="true">
-              🕋
-            </div>
-
-            <div>
-              <p class="text-base text-gray-500">
-                Jarak dari Masjidil Haram
-              </p>
-
-              <p class="text-lg font-bold
-                                       text-green-700">
-                ± 60 meter
-              </p>
-            </div>
-
-          </div>
-
-
-          <p class="mt-6 text-lg leading-relaxed
-                               text-gray-600">
-            Hotel yang berada dekat dengan
-            Masjidil Haram dapat memberikan
-            kemudahan bagi jamaah dalam
-            menjalankan ibadah.
+          <p class="text-xl font-bold
+                   leading-6 text-gray-900">
+            Makin dekat hotel ke masjid,
+            harganya makin mahal. Hotel Olayan
+            Ajyad dan Lee Meridian adalah salah satu
+            hotel Bintang 4 yang terdekat dengan masjid
+            (± 80 meter)
           </p>
-
-
-          <div class="mt-6 border-t
-                               border-gray-100 pt-5">
-            <p class="text-xs leading-relaxed
-                                   text-gray-400">
-              *
-            </p>
-          </div>
 
         </div>
 
       </article>
 
 
-      <!-- Madinah -->
+      <!-- ========================
+           Madinah
+           ======================== -->
+
       <article class="overflow-hidden rounded-2xl
-                       bg-white shadow-sm
-                       ring-1 ring-gray-100">
+               bg-white shadow-sm
+               ring-1 ring-gray-100">
 
         <!-- Image -->
-        <div class="relative aspect-[16/10] overflow-hidden">
 
-          <img src="./assets/images/concorde.webp" alt="Ilustrasi Masjid Nabawi di Madinah"
-            class="h-full w-full object-cover" loading="lazy">
+        <div class="relative aspect-[16/10]
+                 overflow-hidden">
+
+          <img src="./assets/images/concorde.webp" alt="Ilustrasi Masjid Nabawi di Madinah" class="h-full w-full
+                   object-cover
+                   transition duration-500
+                   hover:scale-105" loading="lazy">
 
           <div class="absolute inset-x-0 bottom-0
-                               bg-gradient-to-t
-                               from-black/70 to-transparent
-                               p-6">
+                   bg-gradient-to-t
+                   from-black/70
+                   to-transparent
+                   p-6">
 
             <p class="text-sm font-medium
-                                   text-white/90">
+                     text-white/90">
               Madinah
             </p>
 
             <h3 class="mt-1 text-2xl font-bold
-                                   text-white">
+                     text-white">
               Hotel Concorde
             </h3>
 
@@ -143,52 +137,14 @@
 
 
         <!-- Content -->
-        <div class="p-6 sm:p-8">
 
-          <div class="flex items-center gap-3">
+        <div class="p-6">
 
-            <div class="flex h-11 w-11
-                                   shrink-0 items-center
-                                   justify-center
-                                   rounded-full
-                                   bg-green-100" aria-hidden="true">
-              🕌
-            </div>
-
-            <div>
-
-              <p class="text-base text-gray-500">
-                Jarak dari Masjid Nabawi
-              </p>
-
-              <p class="text-lg font-bold
-                                       text-green-700">
-                ± 70 meter
-              </p>
-
-            </div>
-
-          </div>
-
-
-          <p class="mt-6 text-lg leading-relaxed
-                               text-gray-600">
-            Lokasi hotel yang dekat dengan
-            Masjid Nabawi membantu jamaah
-            mendapatkan akses yang lebih mudah
-            untuk beribadah.
+          <p class="text-xl font-bold
+                   leading-6 text-gray-900">
+            Hotel Concorde dan Sanabel Madinah
+            (± 70 meter)
           </p>
-
-
-          <div class="mt-6 border-t
-                               border-gray-100 pt-5">
-
-            <p class="text-xs leading-relaxed
-                                   text-gray-400">
-              *
-            </p>
-
-          </div>
 
         </div>
 
@@ -197,25 +153,35 @@
     </div>
 
 
-    <!-- Highlight -->
-    <div class="mx-auto mt-10 max-w-4xl
-                   rounded-2xl bg-green-800
-                   px-6 py-8 text-center
-                   text-white sm:px-10">
+    <!-- =========================
+         Highlight
+         ========================= -->
 
-      <p class="text-xl font-bold
-                       leading-relaxed sm:text-2xl">
-        JADI MAU PILIH YANG MANA, HOTEL JAUH TAPI MURAH ATAU HOTEL DEKAT TAPI IBADAH LEBIH NYAMAN?
-      </p>
+    <div class="mx-auto mt-8 max-w-6xl
+             overflow-hidden rounded-2xl
+             bg-green-800 shadow-lg">
 
-      <p class="mx-auto mt-3 max-w-2xl
-                       text-lg leading-relaxed
-                       text-green-100 sm:text-xl">
-        Karena tujuan utama kita adalah beribadah
-        dengan aman, nyaman, dan tenang.
-      </p>
+      <div class="relative flex
+               flex-col gap-4
+               p-6 sm:p-7">
+
+        <div class="absolute inset-0
+                 bg-green-900/20"></div>
+
+        <div class="relative">
+
+          <h4 class="text-2xl font-bold
+                   leading-7 text-white">
+            Biaya Umrah akan lebih murah jika menggunakan
+            pesawat singgah-singgah dan hotel jauh dari masjid.
+          </h4>
+
+        </div>
+
+      </div>
 
     </div>
 
   </div>
+
 </section>
