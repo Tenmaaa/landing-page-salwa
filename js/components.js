@@ -11,6 +11,10 @@ const components = [
   "faq",
   "cta",
   "footer",
+  "about_hero",
+  "about_company",
+  "about_history",
+  "about_legalitas",
 ];
 
 async function loadComponent(name) {
