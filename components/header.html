@@ -1,30 +1,39 @@
-<header class="sticky top-0 z-50 border-b border-gray-100
-         bg-white/95 shadow-sm backdrop-blur">
+<header id="site-header" class="fixed inset-x-0 top-0 z-50
+         border-b border-gray-100
+         bg-white/95
+         shadow-sm
+         backdrop-blur
+         transition-transform
+         duration-300
+         ease-in-out">
+
+  <!-- NAVBAR -->
   <nav class="mx-auto flex max-w-7xl items-center
            justify-between px-6 py-4 lg:px-8">
 
-    <!-- Logo -->
+    <!-- LOGO -->
     <a data-page="home" href="#" class="flex items-center gap-3" aria-label="Salwa Tours - Beranda">
 
-      <!-- Logo -->
       <div class="flex h-12 w-12 shrink-0
-            items-center justify-center
-            overflow-hidden rounded-full
-            bg-green-800
-            md:h-14 md:w-14">
-        <img src="
-        https://raw.githubusercontent.com/Tenmaaa/landing-page-salwa/refs/heads/main/assets/images/logo.webp"
+               items-center justify-center
+               overflow-hidden rounded-full
+               bg-green-800
+               md:h-14 md:w-14">
+
+        <img src="https://raw.githubusercontent.com/Tenmaaa/landing-page-salwa/refs/heads/main/assets/images/logo.webp"
           alt="Logo Salwa Tours" class="h-full w-full object-cover">
       </div>
 
-      <!-- Brand Information -->
+      <!-- INFORMASI BRAND -->
       <div class="min-w-0">
+
         <span class="block text-lg font-extrabold
                  leading-none tracking-wide text-green-800">
           SALWA TOURS
         </span>
 
         <div class="mt-1.5 space-y-0.5 leading-tight">
+
           <span class="block text-xs font-medium text-gray-500">
             PT. Salwa Faridzha Wisata
           </span>
@@ -32,13 +41,15 @@
           <span class="block text-[10px] text-gray-400">
             Izin 12390005127750001
           </span>
+
         </div>
+
       </div>
 
     </a>
 
 
-    <!-- Desktop Navigation -->
+    <!-- DESKTOP NAVIGATION -->
     <div class="hidden items-center gap-7 md:flex" aria-label="Navigasi utama">
 
       <a data-page="home" href="#" class="text-sm font-medium text-gray-700
@@ -56,39 +67,32 @@
         Paket Umrah
       </a>
 
-      <a data-page="gallery" href="#" class="text-sm font-medium text-gray-700
+
+      <!-- <a data-page="gallery" href="#" class="text-sm font-medium text-gray-700
                transition-colors hover:text-green-700">
         Galeri
-      </a>
+      </a> -->
 
-
-      <!-- WhatsApp -->
-      <a href="https://wa.me/628135548875" target="_blank" rel="noopener noreferrer" class="rounded-lg bg-green-700
-               px-5 py-2.5
-               text-sm font-semibold text-white
-               shadow-sm
-               transition
-               hover:bg-green-800
-               hover:shadow-md">
-        WhatsApp
-      </a>
+      <!-- WHATSAPP -->
 
     </div>
 
 
-    <!-- Mobile Menu Button -->
+    <!-- MOBILE MENU BUTTON -->
     <button id="menu-button" type="button" aria-label="Buka menu" aria-expanded="false" aria-controls="mobile-menu"
       class="rounded-lg p-2
              text-2xl text-green-800
              transition hover:bg-green-50
              md:hidden">
+
       ☰
+
     </button>
 
   </nav>
 
 
-  <!-- Mobile Navigation -->
+  <!-- MOBILE NAVIGATION -->
   <div id="mobile-menu" class="hidden border-t border-gray-100
            bg-white md:hidden">
 
@@ -119,23 +123,17 @@
         Paket Umrah
       </a>
 
-      <a data-page="gallery" href="#" class="mobile-nav-link block rounded-lg
+
+
+      <!-- <a data-page="gallery" href="#" class="mobile-nav-link block rounded-lg
                px-4 py-3 text-sm font-medium
                text-gray-700
                hover:bg-green-50
                hover:text-green-700">
         Galeri
-      </a>
+      </a> -->
+      <!-- MOBILE WHATSAPP -->
 
-
-      <!-- Mobile WhatsApp -->
-      <a href="https://wa.me/6285398385155" target="_blank" rel="noopener noreferrer" class="mt-3 block rounded-lg
-               bg-green-700 px-4 py-3
-               text-center text-sm
-               font-semibold text-white
-               hover:bg-green-800">
-        Konsultasi via WhatsApp
-      </a>
 
     </nav>
 

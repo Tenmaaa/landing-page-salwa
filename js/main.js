@@ -1,10 +1,10 @@
 document.addEventListener("componentsLoaded", () => {
-  /* =====================================================
-     1. MOBILE MENU
-     ===================================================== */
+  // =====================================================
+  // 1. MOBILE MENU
+  // =====================================================
 
-  const menuButton = document.querySelector("#menu-button");
-  const mobileMenu = document.querySelector("#mobile-menu");
+  const menuButton = document.getElementById("menu-button");
+  const mobileMenu = document.getElementById("mobile-menu");
 
   if (menuButton && mobileMenu) {
     menuButton.addEventListener("click", () => {
@@ -15,7 +15,6 @@ document.addEventListener("componentsLoaded", () => {
       menuButton.setAttribute("aria-expanded", String(isOpen));
     });
 
-    // Menutup menu ketika link diklik
     const mobileLinks = document.querySelectorAll(".mobile-nav-link");
 
     mobileLinks.forEach((link) => {
@@ -27,17 +26,15 @@ document.addEventListener("componentsLoaded", () => {
     });
   }
 
-  /* =====================================================
-     2. FAQ ACCORDION
-     ===================================================== */
+  // =====================================================
+  // 2. FAQ ACCORDION
+  // =====================================================
 
   const faqItems = document.querySelectorAll(".faq-item");
 
   faqItems.forEach((item) => {
     const button = item.querySelector(".faq-button");
-
     const answer = item.querySelector(".faq-answer");
-
     const icon = item.querySelector(".faq-icon");
 
     if (!button || !answer || !icon) {
@@ -47,13 +44,16 @@ document.addEventListener("componentsLoaded", () => {
     button.addEventListener("click", () => {
       const isOpen = button.getAttribute("aria-expanded") === "true";
 
-      // Tutup semua FAQ
       faqItems.forEach((otherItem) => {
         const otherButton = otherItem.querySelector(".faq-button");
 
         const otherAnswer = otherItem.querySelector(".faq-answer");
 
         const otherIcon = otherItem.querySelector(".faq-icon");
+
+        if (!otherButton || !otherAnswer || !otherIcon) {
+          return;
+        }
 
         otherButton.setAttribute("aria-expanded", "false");
 
@@ -64,7 +64,6 @@ document.addEventListener("componentsLoaded", () => {
         otherIcon.classList.remove("rotate-45");
       });
 
-      // Buka FAQ yang dipilih
       if (!isOpen) {
         button.setAttribute("aria-expanded", "true");
 
@@ -77,9 +76,9 @@ document.addEventListener("componentsLoaded", () => {
     });
   });
 
-  /* =====================================================
-     3. TESTIMONIAL CAROUSEL
-     ===================================================== */
+  // =====================================================
+  // 3. TESTIMONIAL CAROUSEL
+  // =====================================================
 
   const track = document.getElementById("testimonial-track");
 
@@ -113,9 +112,9 @@ document.addEventListener("componentsLoaded", () => {
     });
   }
 
-  /* =====================================================
-     4. SCROLL REVEAL
-     ===================================================== */
+  // =====================================================
+  // 4. SCROLL REVEAL
+  // =====================================================
 
   const revealElements = document.querySelectorAll(".reveal");
 
@@ -140,55 +139,42 @@ document.addEventListener("componentsLoaded", () => {
     });
   }
 
-  /* =====================================================
-     5. MOBILE MENU ANIMATION
-     ===================================================== */
+  // =====================================================
+  // 5. HEADER SHOW / HIDE ON SCROLL
+  // =====================================================
 
-  const menuToggle = document.getElementById("menu-toggle");
+  const header = document.getElementById("site-header");
 
-  const animatedMobileMenu = document.getElementById("mobile-menu");
+  if (header) {
+    let lastScrollY = window.scrollY;
 
-  const menuIcon = document.getElementById("menu-icon");
+    window.addEventListener(
+      "scroll",
+      () => {
+        const currentScrollY = window.scrollY;
 
-  const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
+        // Saat berada di paling atas
+        if (currentScrollY <= 10) {
+          header.style.transform = "translateY(0)";
+        }
 
-  if (menuToggle && animatedMobileMenu && menuIcon) {
-    const openMenu = () => {
-      animatedMobileMenu.classList.remove("grid-rows-[0fr]", "opacity-0");
+        // Scroll ke bawah
+        else if (currentScrollY > lastScrollY) {
+          header.style.transform = "translateY(-100%)";
+        }
 
-      animatedMobileMenu.classList.add("grid-rows-[1fr]", "opacity-100");
+        // Scroll ke atas
+        else if (currentScrollY < lastScrollY) {
+          header.style.transform = "translateY(0)";
+        }
 
-      menuIcon.textContent = "×";
-
-      menuToggle.setAttribute("aria-expanded", "true");
-
-      menuToggle.setAttribute("aria-label", "Tutup menu");
-    };
-
-    const closeMenu = () => {
-      animatedMobileMenu.classList.remove("grid-rows-[1fr]", "opacity-100");
-
-      animatedMobileMenu.classList.add("grid-rows-[0fr]", "opacity-0");
-
-      menuIcon.textContent = "☰";
-
-      menuToggle.setAttribute("aria-expanded", "false");
-
-      menuToggle.setAttribute("aria-label", "Buka menu");
-    };
-
-    menuToggle.addEventListener("click", () => {
-      const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
-
-      if (isOpen) {
-        closeMenu();
-      } else {
-        openMenu();
-      }
-    });
-
-    mobileNavLinks.forEach((link) => {
-      link.addEventListener("click", closeMenu);
-    });
+        lastScrollY = currentScrollY;
+      },
+      {
+        passive: true,
+      },
+    );
+  } else {
+    console.error("Header #site-header tidak ditemukan.");
   }
 });

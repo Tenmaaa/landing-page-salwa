@@ -10,11 +10,20 @@ const components = [
   "testimonials",
   "faq",
   "cta",
-  "footer",
+
+  "whatsapp",
   "about_hero",
   "about_company",
   "about_history",
   "about_legalitas",
+
+  "package_hero",
+  "package_intro",
+  "package_cards",
+  "package_facilities",
+  "package_cta",
+
+  "footer",
 ];
 
 async function loadComponent(name) {
@@ -78,6 +87,8 @@ async function loadComponents() {
 
   setupPageLinks();
 
+  // Beritahu main.js bahwa semua komponen
+  // sudah selesai dimuat
   document.dispatchEvent(new Event("componentsLoaded"));
 }
 
