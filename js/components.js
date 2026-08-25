@@ -16,6 +16,7 @@ const components = [
   "about_about",
   "about_history",
   "about_legalitas",
+  "about_garuda",
   "about_vision",
   "about_mission",
   "about_values",
