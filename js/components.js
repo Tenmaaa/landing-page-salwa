@@ -10,12 +10,19 @@ const components = [
   "testimonials",
   "faq",
   "cta",
-
   "whatsapp",
+
   "about_hero",
-  "about_company",
+  "about_about",
   "about_history",
   "about_legalitas",
+  "about_vision",
+  "about_mission",
+  "about_values",
+  "about_statistics",
+  "about_certificates",
+  "about_gallery",
+  "about_cta",
 
   "package_hero",
   "package_intro",

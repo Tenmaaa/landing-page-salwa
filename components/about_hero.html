@@ -1,64 +1,78 @@
-<!-- ===========================================
-     About Hero
-=========================================== -->
+<!-- ABOUT HERO -->
+<section id="about-hero" class="relative pt-24 md:pt-28 min-h-[650px] overflow-hidden">
+    <!-- Background Image -->
+    <img src="../assets/images/hero.webp" alt="Suasana Masjidil Haram dan Ka'bah"
+        class="absolute inset-0 h-full w-full object-cover" />
 
-<section class="relative overflow-hidden bg-green-900">
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black/45" aria-hidden="true"></div>
 
-    <!-- Background Decoration -->
-    <div class="absolute inset-0">
-        <div
-            class="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-green-700/20 blur-3xl">
-        </div>
+    <!-- Green Gradient Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-r
+           from-green-950/70
+           via-green-950/40
+           to-transparent" aria-hidden="true"></div>
 
-        <div
-            class="absolute -bottom-32 -left-32 h-80 w-80 rounded-full bg-emerald-500/10 blur-3xl">
-        </div>
-    </div>
+    <!-- Content -->
+    <div class="relative mx-auto flex min-h-[650px]
+           max-w-7xl items-center
+           px-6 py-20
+           md:px-10
+           lg:px-12">
+        <div class="max-w-3xl text-white">
 
-    <div class="relative mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
+            <!-- Label -->
+            <p class="mb-4 text-sm font-semibold
+               tracking-[0.2em] text-yellow-300
+               md:text-base">
+                TENTANG SALWA TOURS
+            </p>
 
-        <!-- Breadcrumb -->
-        <nav class="mb-6 flex items-center gap-2 text-sm text-green-200">
+            <!-- Moto -->
+            <p class="mb-5 text-sm font-bold
+               tracking-[0.15em] text-white
+               md:text-base">
+                AMAN
+                <span class="mx-2 text-yellow-300">•</span>
+                NYAMAN
+                <span class="mx-2 text-yellow-300">•</span>
+                TERPERCAYA
+            </p>
 
-            <a href="../index.html"
-                class="transition hover:text-white">
-                Beranda
-            </a>
-
-            <span>/</span>
-
-            <span class="text-white">
-                Tentang Kami
-            </span>
-
-        </nav>
-
-        <div class="max-w-3xl">
-
-            <h1
-                class="mt-6 text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
-
-                Salwa
-                <span class="text-green-300">
-                    Tours
+            <!-- Heading -->
+            <h1 class="text-4xl font-extrabold
+               leading-tight tracking-tight
+               sm:text-5xl
+               md:text-6xl
+               lg:text-7xl">
+                Mengenal Salwa Tours
+                <span class="block text-yellow-400">
+                    Lebih Dekat
                 </span>
-
             </h1>
 
-            <p
-                class="mt-6 max-w-2xl text-lg leading-8 text-green-100">
-
-                PT. Salwa Faridzha Wisata hadir sebagai mitra perjalanan
-                ibadah yang mengedepankan pelayanan profesional,
-                amanah, dan penuh kepedulian. Kami berkomitmen
-                mendampingi setiap langkah jamaah agar dapat
-                melaksanakan ibadah dengan nyaman, tenang,
-                dan penuh keberkahan.
-
+            <!-- Description -->
+            <p class="mt-6 max-w-2xl
+               text-base font-medium
+               leading-7 text-white/90
+               sm:text-lg sm:leading-8">
+                Lebih dari 10 tahun mendampingi perjalanan jamaah
+                menuju Baitullah dengan komitmen untuk memberikan
+                pelayanan yang aman, nyaman, dan terpercaya.
             </p>
 
         </div>
-
     </div>
 
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-7 left-1/2
+           hidden -translate-x-1/2
+           flex-col items-center gap-2
+           text-white/70 sm:flex">
+        <span class="text-xs font-medium tracking-wide">
+            Kenali kami lebih dekat
+        </span>
+
+        <span class="h-8 w-px bg-white/50" aria-hidden="true"></span>
+    </div>
 </section>
