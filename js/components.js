@@ -14,15 +14,14 @@ const components = [
 
   "about_hero",
   "about_about",
-  "about_history",
-  "about_legalitas",
-  "about_garuda",
   "about_vision",
-  "about_mission",
-  "about_values",
-  "about_statistics",
+  "about_legalitas",
+  "about_certificates",
+  "about_garuda",
+  "about_history",
   "about_pelayanan",
-  "about_gallery",
+  "about_statistics",
+  "about_values",
   "about_cta",
 
   "package_hero",
@@ -92,7 +91,10 @@ async function loadComponents() {
   for (const component of components) {
     await loadComponent(component);
   }
-
+  // Inisialisasi ulang ikon setelah semua component dimuat
+  if (typeof lucide !== "undefined") {
+    lucide.createIcons();
+  }
   setupPageLinks();
 
   // Beritahu main.js bahwa semua komponen
