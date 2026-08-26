@@ -21,7 +21,7 @@ const components = [
   "about_mission",
   "about_values",
   "about_statistics",
-  "about_certificates",
+  "about_pelayanan",
   "about_gallery",
   "about_cta",
 
