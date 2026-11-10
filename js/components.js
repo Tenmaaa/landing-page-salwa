@@ -30,6 +30,11 @@ const components = [
   "package_facilities",
   "package_cta",
 
+  "kerjasama_hero",
+  "kerjasama_manfaat",
+  "kerjasama_pemateri",
+  "kerjasama_pendaftaran",
+
   "footer",
 ];
 
@@ -72,6 +77,8 @@ function setupPageLinks() {
     umrah: isPagesDirectory ? "./paket_umrah.html" : "./pages/paket_umrah.html",
 
     gallery: isPagesDirectory ? "./galeri.html" : "./pages/galeri.html",
+
+    kerjasama: isPagesDirectory ? "./kerjasama.html" : "./pages/kerjasama.html",
 
     contact: isPagesDirectory ? "./kontak.html" : "./pages/kontak.html",
   };
