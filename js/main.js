@@ -46,9 +46,7 @@ document.addEventListener("componentsLoaded", () => {
 
       faqItems.forEach((otherItem) => {
         const otherButton = otherItem.querySelector(".faq-button");
-
         const otherAnswer = otherItem.querySelector(".faq-answer");
-
         const otherIcon = otherItem.querySelector(".faq-icon");
 
         if (!otherButton || !otherAnswer || !otherIcon) {
@@ -56,21 +54,15 @@ document.addEventListener("componentsLoaded", () => {
         }
 
         otherButton.setAttribute("aria-expanded", "false");
-
         otherAnswer.classList.remove("grid-rows-[1fr]");
-
         otherAnswer.classList.add("grid-rows-[0fr]");
-
         otherIcon.classList.remove("rotate-45");
       });
 
       if (!isOpen) {
         button.setAttribute("aria-expanded", "true");
-
         answer.classList.remove("grid-rows-[0fr]");
-
         answer.classList.add("grid-rows-[1fr]");
-
         icon.classList.add("rotate-45");
       }
     });
@@ -81,9 +73,7 @@ document.addEventListener("componentsLoaded", () => {
   // =====================================================
 
   const track = document.getElementById("testimonial-track");
-
   const prevButton = document.getElementById("testimonial-prev");
-
   const nextButton = document.getElementById("testimonial-next");
 
   if (track && prevButton && nextButton) {
@@ -176,5 +166,61 @@ document.addEventListener("componentsLoaded", () => {
     );
   } else {
     console.error("Header #site-header tidak ditemukan.");
+  }
+
+  // =====================================================
+  // 6. FORMSPREE AJAX SUBMIT & REDIRECT TO THANK YOU PAGE
+  // =====================================================
+
+  const form = document.getElementById("formspree-kerjasama");
+  const submitBtn = document.getElementById("submit-btn");
+
+  if (form) {
+    form.addEventListener("submit", async function (event) {
+      event.preventDefault(); // Mencegah redirect bawaan Formspree
+
+      const data = new FormData(event.target);
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerText = "Mengirim Data...";
+      }
+
+      try {
+        const response = await fetch(event.target.action, {
+          method: form.method,
+          body: data,
+          headers: {
+            Accept: "application/json",
+          },
+        });
+
+        if (response.ok) {
+          // Deteksi lokasi folder saat ini
+          const isPagesDirectory = window.location.pathname.includes("/pages/");
+
+          // Redirect ke halaman thank_you.html
+          window.location.href = isPagesDirectory
+            ? "./thank_you.html"
+            : "./pages/thank_you.html";
+        } else {
+          alert(
+            "Terjadi kesalahan saat mengirim data. Silakan daftar langsung via WhatsApp.",
+          );
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerText = "Kirim Form Pendaftaran";
+          }
+        }
+      } catch (error) {
+        alert(
+          "Koneksi gagal. Silakan coba lagi atau daftar langsung via WhatsApp.",
+        );
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerText = "Kirim Form Pendaftaran";
+        }
+      }
+    });
   }
 });
