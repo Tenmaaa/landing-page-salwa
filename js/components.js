@@ -33,6 +33,7 @@ const components = [
   "kerjasama_hero",
   "kerjasama_manfaat",
   "kerjasama_pemateri",
+  "kerjasama_jadwal",
   "kerjasama_pendaftaran",
 
   "footer",
